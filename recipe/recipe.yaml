@@ -15,7 +15,7 @@ source:
 build:
   number: 2
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -39,8 +39,7 @@ tests:
 about:
   summary: VAG API
   license: Apache-2.0
-  license_file:
-    - LICENSE
+  license_file: LICENSE
   homepage: https://github.com/bundesAPI/vag-api
 
 extra:
